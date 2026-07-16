@@ -31,7 +31,7 @@ if arquivo_enviado is not None:
                 
                 # Executa o utilitário do Calibre instalado no container Docker
                 # As configurações de sandbox e headless são gerenciadas pelas variáveis de ambiente no Dockerfile
-                comando = ["ebook-convert", caminho_entrada, caminho_saida]
+                comando = ["ebook-convert", caminho_entrada, caminho_saida,"--webengine-arg", "--no-sandbox"]
                 resultado = subprocess.run(comando, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 
                 if resultado.returncode == 0:
