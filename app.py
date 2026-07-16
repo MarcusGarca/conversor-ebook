@@ -34,7 +34,6 @@ if arquivo_enviado is not None:
                     "ebook-convert", 
                     caminho_entrada, 
                     caminho_saida,
-                    "--disable-font-subsetting",  # Evita reprocessar fontes embutidas (economiza muita CPU)
                     "--pdf-sans-family", "Arial"  # Usa uma fonte padrão e rápida
                 ]
                 
